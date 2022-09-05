@@ -13,6 +13,7 @@
 		CE515BA628C6949000CFF54B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE515BA428C6949000CFF54B /* Main.storyboard */; };
 		CE515BA828C6949400CFF54B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE515BA728C6949400CFF54B /* Assets.xcassets */; };
 		CE515BAB28C6949400CFF54B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE515BA928C6949400CFF54B /* LaunchScreen.storyboard */; };
+		CE515BB328C694B000CFF54B /* JsonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE515BB228C694B000CFF54B /* JsonModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CE515BA728C6949400CFF54B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE515BAA28C6949400CFF54B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE515BAC28C6949400CFF54B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE515BB228C694B000CFF54B /* JsonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		CE515B9D28C6949000CFF54B /* JSON + REST API Practice */ = {
 			isa = PBXGroup;
 			children = (
+				CE515BB428C6972A00CFF54B /* Models */,
 				CE515B9E28C6949000CFF54B /* AppDelegate.swift */,
 				CE515BA028C6949000CFF54B /* SceneDelegate.swift */,
 				CE515BA228C6949000CFF54B /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				CE515BAC28C6949400CFF54B /* Info.plist */,
 			);
 			path = "JSON + REST API Practice";
+			sourceTree = "<group>";
+		};
+		CE515BB428C6972A00CFF54B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE515BB228C694B000CFF54B /* JsonModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE515BA328C6949000CFF54B /* ViewController.swift in Sources */,
+				CE515BB328C694B000CFF54B /* JsonModels.swift in Sources */,
 				CE515B9F28C6949000CFF54B /* AppDelegate.swift in Sources */,
 				CE515BA128C6949000CFF54B /* SceneDelegate.swift in Sources */,
 			);
