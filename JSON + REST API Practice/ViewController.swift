@@ -8,10 +8,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var deviceString: String? = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        NetworkManager.shared.requestFromLocal { data in
+            self.deviceString = data
+            print(self.deviceString?.description)
+        }
+        
     }
 
 

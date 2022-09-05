@@ -10,9 +10,9 @@ import Foundation
 
 struct Company: Codable {
     
-    var count: Int?
-    var companyDescription: String?
-    var listOfData: [Device?]
+    var count: Int
+    var companyDescription: String
+    var listOfData: [Device]
     
     
     enum CodingKeys: String, CodingKey {
@@ -24,10 +24,10 @@ struct Company: Codable {
 
 struct Device: Codable {
     
-    var name: String?
-    var modelNumber: String?
-    var countries: [String?]
-    var price: [PriceInfo?]
+    var name: String
+    var modelNumber: String
+    var countries: [String]
+    var price: PriceInfo
     var year: Int?
     
     
@@ -41,14 +41,14 @@ struct Device: Codable {
 
 struct PriceInfo: Codable {
     
-    var regions: [RegionPrice?]
+    var regions: [RegionPrice]
     
 }
 
 
 struct RegionPrice: Codable {
     
-    var name: String?
-    var price: Int?
+    var name: String
+    var price: Int
     
 }
