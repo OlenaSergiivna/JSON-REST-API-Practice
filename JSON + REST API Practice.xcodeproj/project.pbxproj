@@ -15,6 +15,7 @@
 		CE515BAB28C6949400CFF54B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE515BA928C6949400CFF54B /* LaunchScreen.storyboard */; };
 		CE515BB328C694B000CFF54B /* JsonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE515BB228C694B000CFF54B /* JsonModels.swift */; };
 		CE515BB628C6983900CFF54B /* RawData.json in Resources */ = {isa = PBXBuildFile; fileRef = CE515BB528C6983900CFF54B /* RawData.json */; };
+		CE515BB928C6A38600CFF54B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE515BB828C6A38600CFF54B /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CE515BAC28C6949400CFF54B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE515BB228C694B000CFF54B /* JsonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModels.swift; sourceTree = "<group>"; };
 		CE515BB528C6983900CFF54B /* RawData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RawData.json; sourceTree = "<group>"; };
+		CE515BB828C6A38600CFF54B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				CE515BB228C694B000CFF54B /* JsonModels.swift */,
+				CE515BB828C6A38600CFF54B /* File.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE515BB928C6A38600CFF54B /* File.swift in Sources */,
 				CE515BA328C6949000CFF54B /* ViewController.swift in Sources */,
 				CE515BB328C694B000CFF54B /* JsonModels.swift in Sources */,
 				CE515B9F28C6949000CFF54B /* AppDelegate.swift in Sources */,

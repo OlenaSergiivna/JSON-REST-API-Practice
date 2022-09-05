@@ -14,6 +14,12 @@ struct Company: Codable {
     var companyDescription: String?
     var listOfData: [Device?]
     
+    
+    enum CodingKeys: String, CodingKey {
+        case count
+        case companyDescription = "company description"
+        case listOfData = "list of data"
+    }
 }
 
 struct Device: Codable {
@@ -23,6 +29,13 @@ struct Device: Codable {
     var countries: [String?]
     var price: [PriceInfo?]
     var year: Int?
+    
+    
+    enum CodingKeys: String, CodingKey{
+        case name, countries, price, year
+        case modelNumber = "model number"
+    }
+    
     
 }
 
