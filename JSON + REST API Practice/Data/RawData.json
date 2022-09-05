@@ -1,0 +1,134 @@
+{
+    "count": 240_000_000,
+    "company description": "Apple Inc. is an American multinational technology company that specializes in consumer electronics, software and online services headquartered in Cupertino, California, United States.",
+    "list of data": [
+        {
+            "name": "iPhone",
+            "model number": "12 pro max",
+            "countries": [
+                "USA", "Canada", "Mexico"
+            ],
+            "price": {
+                "regions": [
+                    {
+                        "name": "USA",
+                        "price": 1050
+                    },
+                    {
+                        "name": "Canada",
+                        "price": 1060
+                    },
+                    {
+                        "name": "Mexico",
+                        "price": 1080
+                    }
+                ]
+            },
+            "year": 2021
+        },
+        {
+            "name": "iPhone",
+            "model number": "11 pro max",
+            "countries": [
+                "USA", "Canada", "Mexico"
+            ],
+            "price": {
+                "regions": [
+                    {
+                        "name": "USA",
+                        "price": 800
+                    },
+                    {
+                        "name": "Canada",
+                        "price": 820
+                    },
+                    {
+                        "name": "Mexico",
+                        "price": 850
+                    }
+                ]
+            },
+            "year": 2021
+            
+        },
+        {
+            "name": "iPhone",
+            "model number": "13 pro max",
+            "countries": [
+                "USA", "Canada", "Mexico"
+            ],
+            "price": {
+                "regions": [
+                    {
+                        "name": "USA",
+                        "price": 1300
+                    },
+                    {
+                        "name": "Canada",
+                        "price": 1320
+                    },
+                    {
+                        "name": "Mexico",
+                        "price": 1350
+                    }
+                ]
+            },
+            "year": 2021
+        },
+        {
+            "name": "iPhone",
+            "model number": "13 mini",
+            "countries": [
+                "USA", "Canada", "Mexico"
+            ],
+            "price": {
+                "regions": [
+                    {
+                        "name": "USA",
+                        "price": 850
+                    },
+                    {
+                        "name": "Canada",
+                        "price": 870
+                    },
+                    {
+                        "name": "Mexico",
+                        "price": 900
+                    }
+                ]
+            },
+            "year": 2021
+        },
+        {
+            "name": "iPhone",
+            "model number": "13",
+            "countries": [
+                "USA", "Canada", "Mexico"
+            ],
+            "price": {
+                "regions": [
+                    {
+                        "name": "USA",
+                        "price": 1100
+                    },
+                    {
+                        "name": "Canada",
+                        "price": 1120
+                    },
+                    {
+                        "name": "Mexico",
+                        "price": 1150
+                    }
+                ]
+            },
+            "year": 2021
+        }
+    ]
+    
+    
+    
+    
+    
+    
+    
+}
