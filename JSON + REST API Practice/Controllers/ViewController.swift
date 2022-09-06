@@ -16,15 +16,12 @@ class ViewController: UIViewController {
         
         NetworkManager.shared.requestFromLocal { data in
             self.deviceAray = data
-           // print(self.deviceAray.companyDescription ?? "empty")
-           // print(self.deviceAray.listOfData?.first?.modelNumber ?? 0)
-           // print(self.deviceAray.listOfData?.first?.countries.last! ?? "empty")
+            print(self.deviceAray.companyDescription ?? "empty")
+            print(self.deviceAray.listOfData?.first?.modelNumber ?? 0)
+            print(self.deviceAray.listOfData?.first?.countries.last! ?? "empty")
             print(self.deviceAray.listOfData?.last?.priceDevice.regions.first?.nameRegion ?? "empty")
             print(self.deviceAray.listOfData?.last?.priceDevice.regions.last?.priceRegion ?? 0)
         }
-        
     }
-
-
 }
 

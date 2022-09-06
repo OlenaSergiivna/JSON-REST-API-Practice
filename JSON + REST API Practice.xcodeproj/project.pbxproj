@@ -91,10 +91,10 @@
 				CE515BBA28C6A80E00CFF54B /* Podfile */,
 				CE515BB728C6983E00CFF54B /* Data */,
 				CE515BB428C6972A00CFF54B /* Models */,
+				CE6932B328C7AA1A00955A76 /* Views */,
+				CE6932B428C7AA3400955A76 /* Controllers */,
 				CE515B9E28C6949000CFF54B /* AppDelegate.swift */,
 				CE515BA028C6949000CFF54B /* SceneDelegate.swift */,
-				CE515BA228C6949000CFF54B /* ViewController.swift */,
-				CE515BA428C6949000CFF54B /* Main.storyboard */,
 				CE515BA728C6949400CFF54B /* Assets.xcassets */,
 				CE515BA928C6949400CFF54B /* LaunchScreen.storyboard */,
 				CE515BAC28C6949400CFF54B /* Info.plist */,
@@ -117,6 +117,22 @@
 				CE515BB528C6983900CFF54B /* RawData.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		CE6932B328C7AA1A00955A76 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE515BA428C6949000CFF54B /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE6932B428C7AA3400955A76 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE515BA228C6949000CFF54B /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

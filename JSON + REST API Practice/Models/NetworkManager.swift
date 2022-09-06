@@ -30,9 +30,6 @@ struct NetworkManager {
                 print(error.localizedDescription)
                 
             }
-            
         }
-        
-        
     }
 }

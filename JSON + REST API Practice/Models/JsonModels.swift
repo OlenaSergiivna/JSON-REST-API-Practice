@@ -19,9 +19,8 @@ struct Company: Codable {
         case count
         case companyDescription = "company description"
         case listOfData = "list of data"
+        
     }
-    
-
 }
 
 struct Device: Codable {
@@ -38,9 +37,8 @@ struct Device: Codable {
         case nameDevice = "name"
         case priceDevice = "price"
         case modelNumber = "model number"
+        
     }
-    
-    
 }
 
 struct PriceInfo: Codable {
@@ -55,9 +53,10 @@ struct RegionPrice: Codable {
     var nameRegion: String
     var priceRegion: Int
     
+    
     enum CodingKeys: String, CodingKey {
         case nameRegion = "name"
         case priceRegion = "price"
+        
     }
-    
 }
