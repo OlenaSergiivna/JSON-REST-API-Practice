@@ -18,6 +18,8 @@
 		CE515BB628C6983900CFF54B /* RawData.json in Resources */ = {isa = PBXBuildFile; fileRef = CE515BB528C6983900CFF54B /* RawData.json */; };
 		CE515BB928C6A38600CFF54B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE515BB828C6A38600CFF54B /* NetworkManager.swift */; };
 		CE515BBB28C6A80E00CFF54B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CE515BBA28C6A80E00CFF54B /* Podfile */; };
+		CE6932B628C7EA5400955A76 /* MovieGenresModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6932B528C7EA5400955A76 /* MovieGenresModels.swift */; };
+		CE6932B828C7EABD00955A76 /* TrendyMoviesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6932B728C7EABD00955A76 /* TrendyMoviesModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		CE515BB528C6983900CFF54B /* RawData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RawData.json; sourceTree = "<group>"; };
 		CE515BB828C6A38600CFF54B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CE515BBA28C6A80E00CFF54B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		CE6932B528C7EA5400955A76 /* MovieGenresModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenresModels.swift; sourceTree = "<group>"; };
+		CE6932B728C7EABD00955A76 /* TrendyMoviesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendyMoviesModels.swift; sourceTree = "<group>"; };
 		F2BBC1A0EF76CA98500735B8 /* Pods_JSON___REST_API_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_JSON___REST_API_Practice.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,8 +109,10 @@
 		CE515BB428C6972A00CFF54B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CE515BB228C694B000CFF54B /* JsonModels.swift */,
 				CE515BB828C6A38600CFF54B /* NetworkManager.swift */,
+				CE515BB228C694B000CFF54B /* JsonModels.swift */,
+				CE6932B728C7EABD00955A76 /* TrendyMoviesModels.swift */,
+				CE6932B528C7EA5400955A76 /* MovieGenresModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,10 +258,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6932B628C7EA5400955A76 /* MovieGenresModels.swift in Sources */,
 				CE515BB928C6A38600CFF54B /* NetworkManager.swift in Sources */,
 				CE515BA328C6949000CFF54B /* ViewController.swift in Sources */,
 				CE515BB328C694B000CFF54B /* JsonModels.swift in Sources */,
 				CE515B9F28C6949000CFF54B /* AppDelegate.swift in Sources */,
+				CE6932B828C7EABD00955A76 /* TrendyMoviesModels.swift in Sources */,
 				CE515BA128C6949000CFF54B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

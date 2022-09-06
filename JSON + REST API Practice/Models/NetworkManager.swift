@@ -12,9 +12,20 @@ struct NetworkManager {
     
     static let shared = NetworkManager()
     
-    func requestDeviceData(completion: @escaping(Company) -> Void) {
-        //
+    func requestTrendyMovies(completion: @escaping(Trends) -> Void) {
+     
+        let request = AF.request("https://api.themoviedb.org/3/trending/all/day?api_key=<<api_key>>", method: .get)
+        request.responseDecodable(of: Trends.self) { response in
+            do {
+                let data = try response.result.get()
+                completion(data)
+            } catch {
+                print(error.localizedDescription)
+                
+            }
+        }
     }
+}
     
     func requestFromLocal(completion: @escaping(Company) -> Void) {
         guard let url = Bundle.main.url(forResource: "RawData", withExtension: "json") else{
