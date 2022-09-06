@@ -16,7 +16,7 @@ struct NetworkManager {
         //
     }
     
-    func requestFromLocal(completion: @escaping(String?) -> Void) {
+    func requestFromLocal(completion: @escaping(Company) -> Void) {
         guard let url = Bundle.main.url(forResource: "RawData", withExtension: "json") else{
             return
         }
@@ -24,7 +24,7 @@ struct NetworkManager {
         let request = AF.request(url, method: .get)
         request.responseDecodable(of: Company.self) { response in
             do {
-                let data = try response.result.get().companyDescription
+                let data = try response.result.get()
                 completion(data)
             } catch {
                 print(error.localizedDescription)

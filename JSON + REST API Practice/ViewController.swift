@@ -9,14 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var deviceString: String? = ""
-
+    var deviceAray = Company()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NetworkManager.shared.requestFromLocal { data in
-            self.deviceString = data
-            print(self.deviceString?.description)
+            self.deviceAray = data
+           // print(self.deviceAray.companyDescription ?? "empty")
+           // print(self.deviceAray.listOfData?.first?.modelNumber ?? 0)
+           // print(self.deviceAray.listOfData?.first?.countries.last! ?? "empty")
+            print(self.deviceAray.listOfData?.last?.priceDevice.regions.first?.nameRegion ?? "empty")
+            print(self.deviceAray.listOfData?.last?.priceDevice.regions.last?.priceRegion ?? 0)
         }
         
     }
