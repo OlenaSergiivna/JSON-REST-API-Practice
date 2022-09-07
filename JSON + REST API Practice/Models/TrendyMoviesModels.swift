@@ -7,71 +7,6 @@
 
 import Foundation
 
-
-//struct Trends: Codable {
-//    let page: Int
-//    let results: [Movie]
-//    let totalPages: Int
-//    let totalResults: Int
-//
-//    enum CodingKeys: String, CodingKey {
-//        case page, results
-//        case totalPages = "total_pages"
-//        case totalResults = "total_results"
-//    }
-//}
-//
-//
-//struct Movie: Codable {
-//    let adult: Bool
-//    let backdropPath: String?
-//    let id: Int
-//    let name: String
-//    let originalLanguage: OriginalLanguage?
-//    let originalName, overview, posterPath: String?
-//    let mediaType: MediaType
-//    let genreIDS: [Int]
-//    let popularity: Double
-//    let firstAirDate: String
-//    let video: Bool?
-//    let voteAverage: Double?
-//    let voteCount: Int?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case adult
-//        case backdropPath = "backdrop_path"
-//        case id, name
-//        case originalLanguage = "original_language"
-//        case originalName = "original_name"
-//        case overview
-//        case posterPath = "poster_path"
-//        case mediaType = "media_type"
-//        case genreIDS = "genre_ids"
-//        case popularity
-//        case firstAirDate = "first_air_date"
-//        case video
-//        case voteAverage = "vote_average"
-//        case voteCount = "vote_count"
-//    }
-//}
-//
-//enum MediaType: String, Codable {
-//    case movie = "movie"
-//}
-//
-//enum OriginalLanguage: String, Codable {
-//    case en = "en"
-//    case ko = "ko"
-//    case sv = "sv"
-//    case tr = "tr"
-//}
-
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let trend = try? newJSONDecoder().decode(Trend.self, from: jsonData)
-
-
 struct Trends: Codable {
     let page: Int
     let results: [Movie]
@@ -90,10 +25,10 @@ struct Movie: Codable {
     let backdropPath: String?
     let id: Int
     let name: String?
-    let originalLanguage: OriginalLanguage
+    let originalLanguage: String
     let originalName: String?
     let overview, posterPath: String?
-    let mediaType: MediaType
+    let mediaType: String
     let genreIDS: [Int]
     let popularity: Double
     let firstAirDate: String?
@@ -123,15 +58,4 @@ struct Movie: Codable {
         case releaseDate = "release_date"
         case video
     }
-}
-
-enum MediaType: String, Codable {
-    case movie = "movie"
-    case tv = "tv"
-}
-
-enum OriginalLanguage: String, Codable {
-    case en = "en"
-    case ko = "ko"
-    case sv = "sv"
 }

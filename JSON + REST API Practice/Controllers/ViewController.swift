@@ -9,6 +9,9 @@ import UIKit
     
 class ViewController: UIViewController {
     
+    @IBOutlet weak var trendyMoviesTableView: UITableView!
+    
+    
     var deviceAray = Company()
     var trendyMovies: [Movie] = []
     
@@ -26,8 +29,30 @@ class ViewController: UIViewController {
         
         NetworkManager.shared.requestTrendyMovies { data in
             self.trendyMovies = data
-            print(self.trendyMovies.last)
+//            print(self.trendyMovies.last.name/title)
+//            print(self.trendyMovies.last?.voteAverage)
+//            print(self.trendyMovies.last?.mediaType)
+//            print(self.trendyMovies.last?.originalLanguage)
+//            print(self.trendyMovies.last?.overview)
+
+            
+            
+            
+            
         }
     }
 }
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.trendyMovies.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        return cell
+    }
+    
+    
+}

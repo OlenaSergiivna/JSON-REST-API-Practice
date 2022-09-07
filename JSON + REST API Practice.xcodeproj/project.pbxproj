@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C16CB01E7BDF221C77576C4F /* Pods_JSON___REST_API_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BBC1A0EF76CA98500735B8 /* Pods_JSON___REST_API_Practice.framework */; };
+		CE389E1128C934900058008F /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE389E0F28C934900058008F /* MovieTableViewCell.swift */; };
+		CE389E1228C934900058008F /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE389E1028C934900058008F /* MovieTableViewCell.xib */; };
 		CE515B9F28C6949000CFF54B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE515B9E28C6949000CFF54B /* AppDelegate.swift */; };
 		CE515BA128C6949000CFF54B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE515BA028C6949000CFF54B /* SceneDelegate.swift */; };
 		CE515BA328C6949000CFF54B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE515BA228C6949000CFF54B /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		668A78B24EAF3596AA12CDED /* Pods-JSON + REST API Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSON + REST API Practice.release.xcconfig"; path = "Target Support Files/Pods-JSON + REST API Practice/Pods-JSON + REST API Practice.release.xcconfig"; sourceTree = "<group>"; };
 		7E9EC8A7943C7872E2DA284A /* Pods-JSON + REST API Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSON + REST API Practice.debug.xcconfig"; path = "Target Support Files/Pods-JSON + REST API Practice/Pods-JSON + REST API Practice.debug.xcconfig"; sourceTree = "<group>"; };
+		CE389E0F28C934900058008F /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		CE389E1028C934900058008F /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		CE515B9B28C6949000CFF54B /* JSON + REST API Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSON + REST API Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE515B9E28C6949000CFF54B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE515BA028C6949000CFF54B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,15 @@
 				F2BBC1A0EF76CA98500735B8 /* Pods_JSON___REST_API_Practice.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE389E0E28C9345F0058008F /* MovieTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CE389E0F28C934900058008F /* MovieTableViewCell.swift */,
+				CE389E1028C934900058008F /* MovieTableViewCell.xib */,
+			);
+			path = MovieTableView;
 			sourceTree = "<group>";
 		};
 		CE515B9228C6949000CFF54B = {
@@ -128,6 +141,7 @@
 		CE6932B328C7AA1A00955A76 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE389E0E28C9345F0058008F /* MovieTableView */,
 				CE515BA428C6949000CFF54B /* Main.storyboard */,
 			);
 			path = Views;
@@ -203,6 +217,7 @@
 			files = (
 				CE515BBB28C6A80E00CFF54B /* Podfile in Resources */,
 				CE515BB628C6983900CFF54B /* RawData.json in Resources */,
+				CE389E1228C934900058008F /* MovieTableViewCell.xib in Resources */,
 				CE515BAB28C6949400CFF54B /* LaunchScreen.storyboard in Resources */,
 				CE515BA828C6949400CFF54B /* Assets.xcassets in Resources */,
 				CE515BA628C6949000CFF54B /* Main.storyboard in Resources */,
@@ -264,6 +279,7 @@
 				CE515BB328C694B000CFF54B /* JsonModels.swift in Sources */,
 				CE515B9F28C6949000CFF54B /* AppDelegate.swift in Sources */,
 				CE6932B828C7EABD00955A76 /* TrendyMoviesModels.swift in Sources */,
+				CE389E1128C934900058008F /* MovieTableViewCell.swift in Sources */,
 				CE515BA128C6949000CFF54B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
