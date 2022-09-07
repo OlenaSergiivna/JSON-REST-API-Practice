@@ -6,10 +6,11 @@
 //
 
 import UIKit
-
+    
 class ViewController: UIViewController {
     
     var deviceAray = Company()
+    var trendyMovies: [Movie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,11 @@ class ViewController: UIViewController {
             print(self.deviceAray.listOfData?.first?.countries.last! ?? "empty")
             print(self.deviceAray.listOfData?.last?.priceDevice.regions.first?.nameRegion ?? "empty")
             print(self.deviceAray.listOfData?.last?.priceDevice.regions.last?.priceRegion ?? 0)
+        }
+        
+        NetworkManager.shared.requestTrendyMovies { data in
+            self.trendyMovies = data
+            print(self.trendyMovies.last)
         }
     }
 }
