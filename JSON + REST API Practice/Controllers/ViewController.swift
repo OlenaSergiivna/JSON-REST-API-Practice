@@ -10,13 +10,14 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var trendyMoviesTableView: UITableView!
-    
-    
+ 
     var deviceAray = Company()
     var trendyMovies: [Movie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         NetworkManager.shared.requestFromLocal { data in
             self.deviceAray = data
@@ -27,7 +28,7 @@ class ViewController: UIViewController {
             print(self.deviceAray.listOfData?.last?.priceDevice.regions.last?.priceRegion ?? 0)
         }
         
-        NetworkManager.shared.requestTrendyMovies { data in
+        NetworkManager.shared.requestTrendyMovies { [self] data in
             self.trendyMovies = data
 //            print(self.trendyMovies.last.name/title)
 //            print(self.trendyMovies.last?.voteAverage)
@@ -38,7 +39,10 @@ class ViewController: UIViewController {
             
             
             
-            
+            let nib = UINib(nibName: "MovieTableViewCell", bundle: nil)
+            self.trendyMoviesTableView.register(nib, forCellReuseIdentifier: "MovieTableViewCell")
+            self.trendyMoviesTableView.reloadData()
+
         }
     }
 }
@@ -50,8 +54,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        return cell
+        guard let cell = trendyMoviesTableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell") as? MovieTableViewCell else {
+                  return UITableViewCell()
+              }
+              
+              cell.configure(with: trendyMovies[indexPath.row])
+              return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
     

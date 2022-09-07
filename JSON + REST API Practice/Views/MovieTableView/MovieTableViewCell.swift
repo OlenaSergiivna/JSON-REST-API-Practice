@@ -38,7 +38,7 @@ class MovieTableViewCell: UITableViewCell {
             movieTitle.text = data.title
         }
         
-        userScore.text = data.overview
+        userScore.text = "\(data.voteAverage)"
         movieType.text = data.mediaType
         movieLanguage.text = data.originalLanguage
         movieOverview.text = data.overview
