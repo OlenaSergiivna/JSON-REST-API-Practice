@@ -116,6 +116,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="movieLanguage" destination="pIu-no-Gw1" id="hgl-ID-3Hr"/>
+                <outlet property="movieOverview" destination="bZJ-bK-1nj" id="d9j-S4-wuH"/>
+                <outlet property="movieTitle" destination="LLq-ba-Exo" id="tC9-fV-ZGd"/>
+                <outlet property="movieType" destination="y0Q-1t-ycf" id="RXn-3T-DmS"/>
+                <outlet property="userScore" destination="PhG-VQ-pyi" id="Oms-mi-PAp"/>
+            </connections>
             <point key="canvasLocation" x="236.23188405797103" y="47.544642857142854"/>
         </tableViewCell>
         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="65f-fx-Tno">
