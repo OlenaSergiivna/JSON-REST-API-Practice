@@ -45,12 +45,12 @@ struct NetworkManager {
     }
     
     
-    func requestMovieGenres(completion: @escaping(Genres) -> Void) {
+    func requestMovieGenres(completion: @escaping([Genre]) -> Void) {
      
-        let request = AF.request("https://api.themoviedb.org/3/trending/all/day?api_key=b718f4e2921daaf000e347114cf44187", method: .get)
+        let request = AF.request("https://api.themoviedb.org/3/genre/movie/list?api_key=b718f4e2921daaf000e347114cf44187&language=en-US", method: .get)
         request.responseDecodable(of: Genres.self) { response in
             do {
-                let data = try response.result.get()
+                let data = try response.result.get().genres
                 completion(data)
             } catch {
                 print(error.localizedDescription)

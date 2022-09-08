@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
         
         
         NetworkManager.shared.requestFromLocal { data in
@@ -31,15 +31,12 @@ class ViewController: UIViewController {
         
         NetworkManager.shared.requestTrendyMovies { [self] data in
             self.trendyMovies = data
-
+            
             let nib = UINib(nibName: "MovieTableViewCell", bundle: nil)
             self.trendyMoviesTableView.register(nib, forCellReuseIdentifier: "MovieTableViewCell")
             self.trendyMoviesTableView.reloadData()
-
         }
         
-        
-        //NetworkManager.shared.
     }
 }
 
