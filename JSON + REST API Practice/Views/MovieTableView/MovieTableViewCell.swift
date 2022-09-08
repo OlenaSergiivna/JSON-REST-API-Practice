@@ -19,6 +19,8 @@ class MovieTableViewCell: UITableViewCell {
     
     @IBOutlet weak var movieOverview: UILabel!
     
+    @IBOutlet weak var movieImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -42,5 +44,10 @@ class MovieTableViewCell: UITableViewCell {
         movieType.text = data.mediaType
         movieLanguage.text = data.originalLanguage
         movieOverview.text = data.overview
+        if let imagePath = data.posterPath {
+            movieImage.downloaded(from: "https://image.tmdb.org/t/p/w200/\(imagePath)")
+        } else {
+            return
+        }
     }
 }
