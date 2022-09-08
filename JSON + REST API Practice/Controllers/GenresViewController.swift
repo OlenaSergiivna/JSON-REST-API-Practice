@@ -9,7 +9,6 @@ import UIKit
 
 class GenresViewController: UIViewController {
     
-    //var genres: [Genre] = []
 
     @IBOutlet weak var genresTableView: UITableView!
     

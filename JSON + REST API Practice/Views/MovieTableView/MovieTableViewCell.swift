@@ -52,13 +52,20 @@ class MovieTableViewCell: UITableViewCell {
             return
         }
         
+        
         for movieID in data.genreIDS {
+            print("Movie ID: \(movieID)")
+            
             for (index, genre) in genres.enumerated() {
+                print("\(index).\(movieID) - \(genre.id)")
+                
                 if movieID == genre.id {
-                    movieGenre.text! += genre.name
+                    movieGenre.text! += "\(genre.name). "
                 }
             }
         }
         
+        
     }
 }
+

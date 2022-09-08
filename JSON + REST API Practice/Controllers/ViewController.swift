@@ -18,7 +18,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
       
         
-        
         NetworkManager.shared.requestFromLocal { data in
             self.deviceAray = data
             print(self.deviceAray.companyDescription ?? "empty")
@@ -38,15 +37,11 @@ class ViewController: UIViewController {
         }
         
         NetworkManager.shared.requestMovieGenres { data in
-            print(data)
             GlobalVariables.genres = data
-            print(GlobalVariables.genres)
-            
+            self.trendyMoviesTableView.reloadData()
+            //print("Genres data: \(GlobalVariables.genres)")
             
         }
-
-        
-        
     }
 }
 
