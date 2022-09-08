@@ -24,6 +24,7 @@
 		CE6932B828C7EABD00955A76 /* TrendyMoviesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6932B728C7EABD00955A76 /* TrendyMoviesModels.swift */; };
 		CE7A7C6928CA3A09002A1F6E /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A7C6828CA3A09002A1F6E /* UIImageView+Extension.swift */; };
 		CECEA4F428CA775000D203B7 /* GenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEA4F328CA775000D203B7 /* GenresViewController.swift */; };
+		CECEA4FB28CA9EAF00D203B7 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEA4FA28CA9EAF00D203B7 /* GlobalVariables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		CE6932B728C7EABD00955A76 /* TrendyMoviesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendyMoviesModels.swift; sourceTree = "<group>"; };
 		CE7A7C6828CA3A09002A1F6E /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		CECEA4F328CA775000D203B7 /* GenresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresViewController.swift; sourceTree = "<group>"; };
+		CECEA4FA28CA9EAF00D203B7 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		F2BBC1A0EF76CA98500735B8 /* Pods_JSON___REST_API_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_JSON___REST_API_Practice.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -131,6 +133,7 @@
 				CE515BB228C694B000CFF54B /* JsonModels.swift */,
 				CE6932B728C7EABD00955A76 /* TrendyMoviesModels.swift */,
 				CE6932B528C7EA5400955A76 /* MovieGenresModels.swift */,
+				CECEA4FA28CA9EAF00D203B7 /* GlobalVariables.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				CE515BA328C6949000CFF54B /* ViewController.swift in Sources */,
 				CE7A7C6928CA3A09002A1F6E /* UIImageView+Extension.swift in Sources */,
 				CE515BB328C694B000CFF54B /* JsonModels.swift in Sources */,
+				CECEA4FB28CA9EAF00D203B7 /* GlobalVariables.swift in Sources */,
 				CE515B9F28C6949000CFF54B /* AppDelegate.swift in Sources */,
 				CE6932B828C7EABD00955A76 /* TrendyMoviesModels.swift in Sources */,
 				CE389E1128C934900058008F /* MovieTableViewCell.swift in Sources */,

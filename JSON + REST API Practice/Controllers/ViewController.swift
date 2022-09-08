@@ -37,6 +37,16 @@ class ViewController: UIViewController {
             self.trendyMoviesTableView.reloadData()
         }
         
+        NetworkManager.shared.requestMovieGenres { data in
+            print(data)
+            GlobalVariables.genres = data
+            print(GlobalVariables.genres)
+            
+            
+        }
+
+        
+        
     }
 }
 
@@ -51,7 +61,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                   return UITableViewCell()
               }
               
-              cell.configure(with: trendyMovies[indexPath.row])
+        cell.configure(with: trendyMovies[indexPath.row], genres: GlobalVariables.genres)
               return cell
     }
     

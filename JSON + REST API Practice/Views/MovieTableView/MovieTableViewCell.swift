@@ -9,6 +9,8 @@ import UIKit
 
 class MovieTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var movieGenre: UILabel!
+    
     @IBOutlet weak var movieTitle: UILabel!
     
     @IBOutlet weak var userScore: UILabel!
@@ -32,7 +34,7 @@ class MovieTableViewCell: UITableViewCell {
         
     }
     
-    func configure(with data: Movie) {
+    func configure(with data: Movie, genres: [Genre]) {
         
         if let movieName = data.name {
             movieTitle.text = movieName
@@ -49,5 +51,14 @@ class MovieTableViewCell: UITableViewCell {
         } else {
             return
         }
+        
+        for movieID in data.genreIDS {
+            for (index, genre) in genres.enumerated() {
+                if movieID == genre.id {
+                    movieGenre.text! += genre.name
+                }
+            }
+        }
+        
     }
 }
