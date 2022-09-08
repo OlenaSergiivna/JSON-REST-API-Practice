@@ -28,22 +28,18 @@ class ViewController: UIViewController {
             print(self.deviceAray.listOfData?.last?.priceDevice.regions.last?.priceRegion ?? 0)
         }
         
+        
         NetworkManager.shared.requestTrendyMovies { [self] data in
             self.trendyMovies = data
-//            print(self.trendyMovies.last.name/title)
-//            print(self.trendyMovies.last?.voteAverage)
-//            print(self.trendyMovies.last?.mediaType)
-//            print(self.trendyMovies.last?.originalLanguage)
-//            print(self.trendyMovies.last?.overview)
 
-            
-            
-            
             let nib = UINib(nibName: "MovieTableViewCell", bundle: nil)
             self.trendyMoviesTableView.register(nib, forCellReuseIdentifier: "MovieTableViewCell")
             self.trendyMoviesTableView.reloadData()
 
         }
+        
+        
+        //NetworkManager.shared.
     }
 }
 
