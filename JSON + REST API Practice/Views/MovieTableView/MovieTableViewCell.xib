@@ -80,7 +80,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="51.5" height="11"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PhG-VQ-pyi">
                                                 <rect key="frame" x="55.5" y="0.0" width="20" height="11"/>
