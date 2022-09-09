@@ -18,9 +18,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Brl-vL-EQb" userLabel="Second Content View">
-                        <rect key="frame" x="0.0" y="0.0" width="456" height="254"/>
+                        <rect key="frame" x="8" y="8" width="440" height="238"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A5p-IH-cTk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A5p-IH-cTk">
                                 <rect key="frame" x="16" y="16" width="120" height="180"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -30,7 +30,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="G90-YA-CZM" userLabel="Main Stack View">
-                                <rect key="frame" x="144" y="26" width="292" height="86.5"/>
+                                <rect key="frame" x="144" y="26" width="276" height="86.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="LLq-ba-Exo">
                                         <rect key="frame" x="0.0" y="0.0" width="128.5" height="19.5"/>
@@ -93,7 +93,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" minimumScaleFactor="0.5" showsExpansionTextWhenTruncated="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZJ-bK-1nj">
-                                <rect key="frame" x="144" y="139.5" width="304" height="14.5"/>
+                                <rect key="frame" x="144" y="139.5" width="288" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -105,7 +105,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="av5-Gc-PDP" firstAttribute="top" secondItem="G90-YA-CZM" secondAttribute="bottom" constant="8" id="3f7-l0-Ady"/>
                             <constraint firstItem="av5-Gc-PDP" firstAttribute="leading" secondItem="G90-YA-CZM" secondAttribute="leading" id="Fjz-Vu-f21"/>
@@ -122,11 +122,12 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Brl-vL-EQb" secondAttribute="trailing" id="Alt-IO-eb7"/>
-                    <constraint firstItem="Brl-vL-EQb" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" id="Omc-dr-fSq"/>
-                    <constraint firstItem="Brl-vL-EQb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hqE-Dl-iWi"/>
-                    <constraint firstItem="Brl-vL-EQb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zF5-hA-Dtm"/>
+                    <constraint firstAttribute="trailing" secondItem="Brl-vL-EQb" secondAttribute="trailing" constant="8" id="Alt-IO-eb7"/>
+                    <constraint firstItem="Brl-vL-EQb" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" constant="-8" id="Omc-dr-fSq"/>
+                    <constraint firstItem="Brl-vL-EQb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="hqE-Dl-iWi"/>
+                    <constraint firstItem="Brl-vL-EQb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="zF5-hA-Dtm"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -137,15 +138,13 @@
                 <outlet property="movieOverview" destination="bZJ-bK-1nj" id="d9j-S4-wuH"/>
                 <outlet property="movieTitle" destination="LLq-ba-Exo" id="tC9-fV-ZGd"/>
                 <outlet property="movieType" destination="y0Q-1t-ycf" id="RXn-3T-DmS"/>
+                <outlet property="secondContentView" destination="Brl-vL-EQb" id="5pg-Se-nKT"/>
                 <outlet property="userScore" destination="PhG-VQ-pyi" id="Oms-mi-PAp"/>
             </connections>
             <point key="canvasLocation" x="237.68115942028987" y="-12.053571428571429"/>
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

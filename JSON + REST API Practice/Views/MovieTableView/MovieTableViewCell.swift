@@ -9,6 +9,8 @@ import UIKit
 
 class MovieTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var secondContentView: UIView!
+    
     @IBOutlet weak var movieGenre: UILabel!
     
     @IBOutlet weak var movieTitle: UILabel!
@@ -25,6 +27,8 @@ class MovieTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.secondContentView.layer.cornerRadius = 20
         
     }
     
@@ -52,20 +56,24 @@ class MovieTableViewCell: UITableViewCell {
             return
         }
         
+        var genresArray: [String] = []
         
         for movieID in data.genreIDS {
-            print("Movie ID: \(movieID)")
             
             for (index, genre) in genres.enumerated() {
-                print("\(index).\(movieID) - \(genre.id)")
                 
-                if movieID == genre.id {
-                    movieGenre.text! += "\(genre.name). "
+                if !genresArray.contains(where: { $0 == genre.name }) {
+                    
+                    if movieID == genre.id {
+                        movieGenre.text! += "\(genre.name). "
+                        genresArray.append(genre.name)
+                        print(genresArray)
+                }
+                
+                    
                 }
             }
         }
-        
-        
     }
 }
 
