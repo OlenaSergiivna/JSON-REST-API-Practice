@@ -29,8 +29,8 @@
                                     <constraint firstAttribute="width" constant="120" id="yaL-Ng-Zma"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="G90-YA-CZM" userLabel="Main Stack View">
-                                <rect key="frame" x="144" y="26" width="292" height="170.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="G90-YA-CZM" userLabel="Main Stack View">
+                                <rect key="frame" x="144" y="26" width="292" height="86.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="LLq-ba-Exo">
                                         <rect key="frame" x="0.0" y="0.0" width="128.5" height="19.5"/>
@@ -39,7 +39,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lxs-Dk-zmg">
-                                        <rect key="frame" x="0.0" y="64.5" width="138.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="22.5" width="138.5" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gC-0c-9jx">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -74,7 +74,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cFw-AA-cZQ">
-                                        <rect key="frame" x="0.0" y="159.5" width="75.5" height="11"/>
+                                        <rect key="frame" x="0.0" y="75.5" width="75.5" height="11"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Eop-T4-7fP">
                                                 <rect key="frame" x="0.0" y="0.0" width="51.5" height="11"/>
@@ -93,13 +93,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" minimumScaleFactor="0.5" showsExpansionTextWhenTruncated="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZJ-bK-1nj">
-                                <rect key="frame" x="144" y="223.5" width="304" height="14.5"/>
+                                <rect key="frame" x="144" y="139.5" width="304" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="av5-Gc-PDP">
-                                <rect key="frame" x="144" y="204.5" width="42" height="11"/>
+                                <rect key="frame" x="144" y="120.5" width="42" height="11"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -114,8 +114,9 @@
                             <constraint firstItem="A5p-IH-cTk" firstAttribute="top" secondItem="Brl-vL-EQb" secondAttribute="top" constant="16" id="UCg-6t-LLd"/>
                             <constraint firstItem="bZJ-bK-1nj" firstAttribute="leading" secondItem="A5p-IH-cTk" secondAttribute="trailing" constant="8" id="XJf-rY-Dsr"/>
                             <constraint firstAttribute="trailing" secondItem="G90-YA-CZM" secondAttribute="trailing" constant="20" id="XSq-qQ-shB"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="A5p-IH-cTk" secondAttribute="bottom" constant="16" id="ZDB-uI-jl0"/>
                             <constraint firstItem="bZJ-bK-1nj" firstAttribute="leading" secondItem="G90-YA-CZM" secondAttribute="leading" id="bHk-fN-ins"/>
-                            <constraint firstAttribute="bottom" secondItem="bZJ-bK-1nj" secondAttribute="bottom" constant="16" id="bPE-Ak-rRE"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bZJ-bK-1nj" secondAttribute="bottom" constant="16" id="bPE-Ak-rRE"/>
                             <constraint firstAttribute="trailing" secondItem="bZJ-bK-1nj" secondAttribute="trailing" constant="8" id="c5E-9A-2Zi"/>
                             <constraint firstItem="bZJ-bK-1nj" firstAttribute="top" secondItem="av5-Gc-PDP" secondAttribute="bottom" constant="8" id="eo7-nd-T68"/>
                         </constraints>
