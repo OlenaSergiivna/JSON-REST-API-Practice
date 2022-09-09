@@ -9,5 +9,6 @@ import Foundation
 
 struct GlobalVariables {
     
-    static var genres: [Genre] = []
+    static var movieGenres: [Genre] = []
+    static var tvGenres: [Genre] = []
 }

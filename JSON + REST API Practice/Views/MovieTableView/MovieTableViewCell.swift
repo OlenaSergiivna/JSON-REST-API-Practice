@@ -25,6 +25,7 @@ class MovieTableViewCell: UITableViewCell {
     
     @IBOutlet weak var movieImage: UIImageView!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -32,13 +33,13 @@ class MovieTableViewCell: UITableViewCell {
         
     }
     
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        
+ 
     }
     
-    func configure(with data: Movie, genres: [Genre]) {
+    func configure(with data: Movie, genres: [Genre], tvGenres: [Genre]) {
         
         if let movieName = data.name {
             movieTitle.text = movieName
@@ -56,24 +57,28 @@ class MovieTableViewCell: UITableViewCell {
             return
         }
         
-        var genresArray: [String] = []
+        var genresString = ""
         
         for movieID in data.genreIDS {
             
+            if movieType.text == "movie" {
+            
             for (index, genre) in genres.enumerated() {
-                
-                if !genresArray.contains(where: { $0 == genre.name }) {
-                    
+
                     if movieID == genre.id {
-                        movieGenre.text! += "\(genre.name). "
-                        genresArray.append(genre.name)
-                        print(genresArray)
+                        genresString.append("\(genre.name). ")
+                    }
                 }
-                
-                    
+            } else if movieType.text == "tv" {
+                for (index, genre) in tvGenres.enumerated() {
+                    if movieID == genre.id {
+                        genresString.append("\(genre.name). ")
+                    }
                 }
             }
         }
+        movieGenre.text = String("\(genresString)".dropLast(2))
+        
     }
 }
 
