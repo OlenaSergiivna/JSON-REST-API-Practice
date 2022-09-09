@@ -30,10 +30,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="G90-YA-CZM" userLabel="Main Stack View">
-                                <rect key="frame" x="144" y="26" width="276" height="47.5"/>
+                                <rect key="frame" x="144" y="26" width="280" height="47.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="LLq-ba-Exo">
-                                        <rect key="frame" x="0.0" y="0.0" width="128.5" height="19.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movie Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="LLq-ba-Exo">
+                                        <rect key="frame" x="0.0" y="0.0" width="232" height="19.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -74,16 +74,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cFw-AA-cZQ">
-                                        <rect key="frame" x="0.0" y="36.5" width="75.5" height="11"/>
+                                        <rect key="frame" x="0.0" y="36.5" width="51.5" height="11"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Eop-T4-7fP">
                                                 <rect key="frame" x="0.0" y="0.0" width="51.5" height="11"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PhG-VQ-pyi">
-                                                <rect key="frame" x="55.5" y="0.0" width="20" height="11"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -104,21 +98,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★ 0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PhG-VQ-pyi">
+                                <rect key="frame" x="384" y="16" width="40" height="30"/>
+                                <color key="backgroundColor" red="0.81156641240000005" green="0.2077318132" blue="0.24702638390000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Mq5-QE-2gv"/>
+                                    <constraint firstAttribute="width" constant="40" id="eUN-eu-QXd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="av5-Gc-PDP" firstAttribute="top" secondItem="G90-YA-CZM" secondAttribute="bottom" constant="8" id="3f7-l0-Ady"/>
+                            <constraint firstItem="PhG-VQ-pyi" firstAttribute="top" secondItem="A5p-IH-cTk" secondAttribute="top" id="FBj-ht-kvZ"/>
                             <constraint firstItem="av5-Gc-PDP" firstAttribute="leading" secondItem="G90-YA-CZM" secondAttribute="leading" id="Fjz-Vu-f21"/>
                             <constraint firstItem="G90-YA-CZM" firstAttribute="top" secondItem="A5p-IH-cTk" secondAttribute="top" constant="10" id="FzU-oG-NhW"/>
                             <constraint firstItem="A5p-IH-cTk" firstAttribute="leading" secondItem="Brl-vL-EQb" secondAttribute="leading" constant="16" id="My7-Y4-sMr"/>
                             <constraint firstItem="A5p-IH-cTk" firstAttribute="top" secondItem="Brl-vL-EQb" secondAttribute="top" constant="16" id="UCg-6t-LLd"/>
                             <constraint firstItem="bZJ-bK-1nj" firstAttribute="leading" secondItem="A5p-IH-cTk" secondAttribute="trailing" constant="8" id="XJf-rY-Dsr"/>
-                            <constraint firstAttribute="trailing" secondItem="G90-YA-CZM" secondAttribute="trailing" constant="20" id="XSq-qQ-shB"/>
+                            <constraint firstAttribute="trailing" secondItem="G90-YA-CZM" secondAttribute="trailing" constant="16" id="XSq-qQ-shB"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="A5p-IH-cTk" secondAttribute="bottom" constant="16" id="ZDB-uI-jl0"/>
                             <constraint firstItem="bZJ-bK-1nj" firstAttribute="leading" secondItem="G90-YA-CZM" secondAttribute="leading" id="bHk-fN-ins"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bZJ-bK-1nj" secondAttribute="bottom" constant="16" id="bPE-Ak-rRE"/>
                             <constraint firstAttribute="trailing" secondItem="bZJ-bK-1nj" secondAttribute="trailing" constant="8" id="c5E-9A-2Zi"/>
                             <constraint firstItem="bZJ-bK-1nj" firstAttribute="top" secondItem="av5-Gc-PDP" secondAttribute="bottom" constant="8" id="eo7-nd-T68"/>
+                            <constraint firstItem="LLq-ba-Exo" firstAttribute="trailing" secondItem="PhG-VQ-pyi" secondAttribute="leading" constant="-8" id="isO-46-M7J"/>
+                            <constraint firstItem="PhG-VQ-pyi" firstAttribute="trailing" secondItem="G90-YA-CZM" secondAttribute="trailing" id="wd5-W5-uyw"/>
                         </constraints>
                     </view>
                 </subviews>

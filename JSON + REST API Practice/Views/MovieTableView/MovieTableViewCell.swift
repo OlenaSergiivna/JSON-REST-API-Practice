@@ -30,6 +30,9 @@ class MovieTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         self.secondContentView.layer.cornerRadius = 20
+        self.movieImage.layer.cornerRadius = 5
+        self.userScore.layer.masksToBounds = true
+        self.userScore.layer.cornerRadius = 5
         
     }
     
@@ -41,21 +44,30 @@ class MovieTableViewCell: UITableViewCell {
     
     func configure(with data: Movie, genres: [Genre], tvGenres: [Genre]) {
         
+        // MARK: Configuring movie name
+        
         if let movieName = data.name {
             movieTitle.text = movieName
         } else {
             movieTitle.text = data.title
         }
         
-        userScore.text = "\(data.voteAverage)"
+        
+        // MARK: Configuring movie type, language, overview, image and user score
+        
+        userScore.text = "★ \(round((data.voteAverage * 100))/100)"
         movieType.text = data.mediaType
         movieLanguage.text = data.originalLanguage
         movieOverview.text = data.overview
+        
         if let imagePath = data.posterPath {
             movieImage.downloaded(from: "https://image.tmdb.org/t/p/w200/\(imagePath)")
         } else {
             return
         }
+        
+        
+        // MARK: Configuring movie genre
         
         var genresString = ""
         
@@ -77,6 +89,7 @@ class MovieTableViewCell: UITableViewCell {
                 }
             }
         }
+        
         movieGenre.text = String("\(genresString)".dropLast(2))
         
     }
