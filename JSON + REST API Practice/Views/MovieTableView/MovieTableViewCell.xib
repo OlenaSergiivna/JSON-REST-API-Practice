@@ -30,7 +30,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="G90-YA-CZM" userLabel="Main Stack View">
-                                <rect key="frame" x="144" y="26" width="280" height="47.5"/>
+                                <rect key="frame" x="144" y="26" width="280" height="33.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movie Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="LLq-ba-Exo">
                                         <rect key="frame" x="0.0" y="0.0" width="232" height="19.5"/>
@@ -73,27 +73,16 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cFw-AA-cZQ">
-                                        <rect key="frame" x="0.0" y="36.5" width="51.5" height="11"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Eop-T4-7fP">
-                                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="11"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" minimumScaleFactor="0.5" showsExpansionTextWhenTruncated="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZJ-bK-1nj">
-                                <rect key="frame" x="144" y="100.5" width="288" height="14.5"/>
+                                <rect key="frame" x="144" y="86.5" width="288" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="av5-Gc-PDP">
-                                <rect key="frame" x="144" y="81.5" width="42" height="11"/>
+                                <rect key="frame" x="144" y="67.5" width="42" height="11"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -131,7 +120,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" red="0.9483513109611742" green="0.9483513109611742" blue="0.9483513109611742" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Brl-vL-EQb" secondAttribute="trailing" constant="8" id="Alt-IO-eb7"/>
                     <constraint firstItem="Brl-vL-EQb" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" constant="-8" id="Omc-dr-fSq"/>

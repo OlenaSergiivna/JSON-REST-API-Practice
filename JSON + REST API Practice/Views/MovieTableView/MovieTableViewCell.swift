@@ -75,14 +75,16 @@ class MovieTableViewCell: UITableViewCell {
             
             if movieType.text == "movie" {
             
-            for (index, genre) in genres.enumerated() {
+            for genre in genres {
 
                     if movieID == genre.id {
                         genresString.append("\(genre.name). ")
                     }
                 }
+                
             } else if movieType.text == "tv" {
-                for (index, genre) in tvGenres.enumerated() {
+        
+                for genre in tvGenres {
                     if movieID == genre.id {
                         genresString.append("\(genre.name). ")
                     }
