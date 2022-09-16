@@ -8,7 +8,14 @@
 import Foundation
 import RealmSwift
 
-class MoviesRealm: Object {
+class TrendsRealm: Object {
+    @Persisted var page: Int
+    @Persisted var results: List<MovieRealm>
+    @Persisted var totalPages: Int
+    @Persisted var totalResults: Int
+}
+
+class MovieRealm: Object {
     
     @Persisted var adult: Bool
     @Persisted var backdropPath: String?

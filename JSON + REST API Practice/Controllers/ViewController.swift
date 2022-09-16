@@ -18,32 +18,36 @@ class ViewController: UIViewController {
         super.viewDidLoad()
       
         
-        NetworkManager.shared.requestFromLocal { data in
-            self.deviceAray = data
-            print(self.deviceAray.companyDescription ?? "empty")
-            print(self.deviceAray.listOfData?.first?.modelNumber ?? 0)
-            print(self.deviceAray.listOfData?.first?.countries.last! ?? "empty")
-            print(self.deviceAray.listOfData?.last?.priceDevice.regions.first?.nameRegion ?? "empty")
-            print(self.deviceAray.listOfData?.last?.priceDevice.regions.last?.priceRegion ?? 0)
+        NetworkManager.shared.requestFromLocal { [weak self]  data in
+            self?.deviceAray = data
+            print(self?.deviceAray.companyDescription ?? "empty")
+            print(self?.deviceAray.listOfData?.first?.modelNumber ?? 0)
+            print(self?.deviceAray.listOfData?.first?.countries.last! ?? "empty")
+            print(self?.deviceAray.listOfData?.last?.priceDevice.regions.first?.nameRegion ?? "empty")
+            print(self?.deviceAray.listOfData?.last?.priceDevice.regions.last?.priceRegion ?? 0)
         }
         
         
-        NetworkManager.shared.requestTrendyMovies { [self] data in
-            self.trendyMovies = data
+        NetworkManager.shared.requestTrendyMovies { [weak self] data in
+            saveInRealm(movies: data)
+           let result = getFromRealm()
+            print(result)
+           
+            self?.trendyMovies = data
             
             let nib = UINib(nibName: "MovieTableViewCell", bundle: nil)
-            self.trendyMoviesTableView.register(nib, forCellReuseIdentifier: "MovieTableViewCell")
-            self.trendyMoviesTableView.reloadData()
+            self?.trendyMoviesTableView.register(nib, forCellReuseIdentifier: "MovieTableViewCell")
+            self?.trendyMoviesTableView.reloadData()
         }
         
-        NetworkManager.shared.requestMovieGenres { data in
+        NetworkManager.shared.requestMovieGenres { [weak self] data in
             GlobalVariables.movieGenres = data
-            self.trendyMoviesTableView.reloadData()
+            self?.trendyMoviesTableView.reloadData()
         }
         
-        NetworkManager.shared.requestTVGenres { data in
+        NetworkManager.shared.requestTVGenres { [weak self] data in
             GlobalVariables.tvGenres = data
-            self.trendyMoviesTableView.reloadData()
+            self?.trendyMoviesTableView.reloadData()
         }
     }
 }
