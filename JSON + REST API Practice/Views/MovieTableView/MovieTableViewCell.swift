@@ -42,7 +42,7 @@ class MovieTableViewCell: UITableViewCell {
  
     }
     
-    func configure(with data: Movie, genres: [Genre], tvGenres: [Genre]) {
+    func configure(with data: MovieRealm, genres: [Genre], tvGenres: [Genre]) {
         
         // MARK: Configuring movie name
         

@@ -6,34 +6,33 @@
 //
 
 import UIKit
-    
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var trendyMoviesTableView: UITableView!
- 
+    
     var deviceAray = Company()
-    var trendyMovies: [Movie] = []
+    var trendyMovies: [MovieRealm] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
         
         NetworkManager.shared.requestFromLocal { [weak self]  data in
             self?.deviceAray = data
-            print(self?.deviceAray.companyDescription ?? "empty")
-            print(self?.deviceAray.listOfData?.first?.modelNumber ?? 0)
-            print(self?.deviceAray.listOfData?.first?.countries.last! ?? "empty")
-            print(self?.deviceAray.listOfData?.last?.priceDevice.regions.first?.nameRegion ?? "empty")
-            print(self?.deviceAray.listOfData?.last?.priceDevice.regions.last?.priceRegion ?? 0)
+//            print(self?.deviceAray.companyDescription ?? "empty")
+//            print(self?.deviceAray.listOfData?.first?.modelNumber ?? 0)
+//            print(self?.deviceAray.listOfData?.first?.countries.last! ?? "empty")
+//            print(self?.deviceAray.listOfData?.last?.priceDevice.regions.first?.nameRegion ?? "empty")
+//            print(self?.deviceAray.listOfData?.last?.priceDevice.regions.last?.priceRegion ?? 0)
         }
         
         
         NetworkManager.shared.requestTrendyMovies { [weak self] data in
             saveInRealm(movies: data)
-           let result = getFromRealm()
-            print(result)
-           
-            self?.trendyMovies = data
+            
+            let result = getFromRealm()
+            self?.trendyMovies = result
             
             let nib = UINib(nibName: "MovieTableViewCell", bundle: nil)
             self?.trendyMoviesTableView.register(nib, forCellReuseIdentifier: "MovieTableViewCell")
@@ -60,11 +59,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = trendyMoviesTableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell") as? MovieTableViewCell else {
-                  return UITableViewCell()
-              }
-              
+            return UITableViewCell()
+        }
+        
         cell.configure(with: trendyMovies[indexPath.row], genres: GlobalVariables.movieGenres, tvGenres: GlobalVariables.tvGenres)
-              return cell
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
