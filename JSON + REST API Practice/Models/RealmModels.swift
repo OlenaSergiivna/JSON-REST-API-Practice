@@ -19,7 +19,7 @@ class MovieRealm: Object {
     
     @Persisted var adult: Bool
     @Persisted var backdropPath: String?
-    @Persisted var id: Int
+    @Persisted(primaryKey: true) var id: Int
     @Persisted var name: String?
     @Persisted var originalLanguage: String
     @Persisted var originalName: String?

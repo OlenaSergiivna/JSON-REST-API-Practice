@@ -10,9 +10,11 @@
 		C16CB01E7BDF221C77576C4F /* Pods_JSON___REST_API_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BBC1A0EF76CA98500735B8 /* Pods_JSON___REST_API_Practice.framework */; };
 		CE389E1128C934900058008F /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE389E0F28C934900058008F /* MovieTableViewCell.swift */; };
 		CE389E1228C934900058008F /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE389E1028C934900058008F /* MovieTableViewCell.xib */; };
+		CE3B7B8028D67C010006EB45 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3B7B7E28D67C010006EB45 /* LoadingCell.swift */; };
+		CE3B7B8128D67C010006EB45 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3B7B7F28D67C010006EB45 /* LoadingCell.xib */; };
 		CE515B9F28C6949000CFF54B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE515B9E28C6949000CFF54B /* AppDelegate.swift */; };
 		CE515BA128C6949000CFF54B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE515BA028C6949000CFF54B /* SceneDelegate.swift */; };
-		CE515BA328C6949000CFF54B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE515BA228C6949000CFF54B /* ViewController.swift */; };
+		CE515BA328C6949000CFF54B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE515BA228C6949000CFF54B /* MainViewController.swift */; };
 		CE515BA628C6949000CFF54B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE515BA428C6949000CFF54B /* Main.storyboard */; };
 		CE515BA828C6949400CFF54B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE515BA728C6949400CFF54B /* Assets.xcassets */; };
 		CE515BAB28C6949400CFF54B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE515BA928C6949400CFF54B /* LaunchScreen.storyboard */; };
@@ -21,10 +23,11 @@
 		CE515BB928C6A38600CFF54B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE515BB828C6A38600CFF54B /* NetworkManager.swift */; };
 		CE515BBB28C6A80E00CFF54B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CE515BBA28C6A80E00CFF54B /* Podfile */; };
 		CE520C5228D4BB7000C0DED0 /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE520C5128D4BB7000C0DED0 /* RealmModels.swift */; };
-		CE568FCD28D4E34200F96DAC /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE568FCC28D4E34200F96DAC /* RealmManager.swift */; };
+		CE568FCD28D4E34200F96DAC /* RealmFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE568FCC28D4E34200F96DAC /* RealmFunctions.swift */; };
 		CE6932B628C7EA5400955A76 /* MovieGenresModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6932B528C7EA5400955A76 /* MovieGenresModels.swift */; };
 		CE6932B828C7EABD00955A76 /* TrendyMoviesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6932B728C7EABD00955A76 /* TrendyMoviesModels.swift */; };
 		CE7A7C6928CA3A09002A1F6E /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7A7C6828CA3A09002A1F6E /* UIImageView+Extension.swift */; };
+		CEB5C84828D64EF000F1B3C2 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB5C84728D64EF000F1B3C2 /* File.swift */; };
 		CECEA4F428CA775000D203B7 /* GenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEA4F328CA775000D203B7 /* GenresViewController.swift */; };
 		CECEA4FB28CA9EAF00D203B7 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECEA4FA28CA9EAF00D203B7 /* GlobalVariables.swift */; };
 /* End PBXBuildFile section */
@@ -34,10 +37,12 @@
 		7E9EC8A7943C7872E2DA284A /* Pods-JSON + REST API Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSON + REST API Practice.debug.xcconfig"; path = "Target Support Files/Pods-JSON + REST API Practice/Pods-JSON + REST API Practice.debug.xcconfig"; sourceTree = "<group>"; };
 		CE389E0F28C934900058008F /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		CE389E1028C934900058008F /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		CE3B7B7E28D67C010006EB45 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		CE3B7B7F28D67C010006EB45 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		CE515B9B28C6949000CFF54B /* JSON + REST API Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JSON + REST API Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE515B9E28C6949000CFF54B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE515BA028C6949000CFF54B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE515BA228C6949000CFF54B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE515BA228C6949000CFF54B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE515BA528C6949000CFF54B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE515BA728C6949400CFF54B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE515BAA28C6949400CFF54B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,10 +52,11 @@
 		CE515BB828C6A38600CFF54B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CE515BBA28C6A80E00CFF54B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CE520C5128D4BB7000C0DED0 /* RealmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
-		CE568FCC28D4E34200F96DAC /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		CE568FCC28D4E34200F96DAC /* RealmFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFunctions.swift; sourceTree = "<group>"; };
 		CE6932B528C7EA5400955A76 /* MovieGenresModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenresModels.swift; sourceTree = "<group>"; };
 		CE6932B728C7EABD00955A76 /* TrendyMoviesModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendyMoviesModels.swift; sourceTree = "<group>"; };
 		CE7A7C6828CA3A09002A1F6E /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		CEB5C84728D64EF000F1B3C2 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		CECEA4F328CA775000D203B7 /* GenresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresViewController.swift; sourceTree = "<group>"; };
 		CECEA4FA28CA9EAF00D203B7 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		F2BBC1A0EF76CA98500735B8 /* Pods_JSON___REST_API_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_JSON___REST_API_Practice.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +100,15 @@
 			path = MovieTableView;
 			sourceTree = "<group>";
 		};
+		CE3B7B8228D67C0F0006EB45 /* LoadingCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE3B7B7E28D67C010006EB45 /* LoadingCell.swift */,
+				CE3B7B7F28D67C010006EB45 /* LoadingCell.xib */,
+			);
+			path = LoadingCell;
+			sourceTree = "<group>";
+		};
 		CE515B9228C6949000CFF54B = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +141,7 @@
 				CE515BA728C6949400CFF54B /* Assets.xcassets */,
 				CE515BA928C6949400CFF54B /* LaunchScreen.storyboard */,
 				CE515BAC28C6949400CFF54B /* Info.plist */,
+				CEB5C84728D64EF000F1B3C2 /* File.swift */,
 			);
 			path = "JSON + REST API Practice";
 			sourceTree = "<group>";
@@ -139,7 +155,7 @@
 				CE515BB228C694B000CFF54B /* JsonModels.swift */,
 				CECEA4FA28CA9EAF00D203B7 /* GlobalVariables.swift */,
 				CE520C5128D4BB7000C0DED0 /* RealmModels.swift */,
-				CE568FCC28D4E34200F96DAC /* RealmManager.swift */,
+				CE568FCC28D4E34200F96DAC /* RealmFunctions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,6 +171,7 @@
 		CE6932B328C7AA1A00955A76 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE3B7B8228D67C0F0006EB45 /* LoadingCell */,
 				CE389E0E28C9345F0058008F /* MovieTableView */,
 				CE515BA428C6949000CFF54B /* Main.storyboard */,
 			);
@@ -164,7 +181,7 @@
 		CE6932B428C7AA3400955A76 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE515BA228C6949000CFF54B /* ViewController.swift */,
+				CE515BA228C6949000CFF54B /* MainViewController.swift */,
 				CECEA4F328CA775000D203B7 /* GenresViewController.swift */,
 			);
 			path = Controllers;
@@ -238,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3B7B8128D67C010006EB45 /* LoadingCell.xib in Resources */,
 				CE515BBB28C6A80E00CFF54B /* Podfile in Resources */,
 				CE515BB628C6983900CFF54B /* RawData.json in Resources */,
 				CE389E1228C934900058008F /* MovieTableViewCell.xib in Resources */,
@@ -299,14 +317,16 @@
 				CECEA4F428CA775000D203B7 /* GenresViewController.swift in Sources */,
 				CE6932B628C7EA5400955A76 /* MovieGenresModels.swift in Sources */,
 				CE515BB928C6A38600CFF54B /* NetworkManager.swift in Sources */,
-				CE515BA328C6949000CFF54B /* ViewController.swift in Sources */,
+				CE515BA328C6949000CFF54B /* MainViewController.swift in Sources */,
 				CE7A7C6928CA3A09002A1F6E /* UIImageView+Extension.swift in Sources */,
 				CE515BB328C694B000CFF54B /* JsonModels.swift in Sources */,
 				CECEA4FB28CA9EAF00D203B7 /* GlobalVariables.swift in Sources */,
 				CE515B9F28C6949000CFF54B /* AppDelegate.swift in Sources */,
 				CE6932B828C7EABD00955A76 /* TrendyMoviesModels.swift in Sources */,
+				CE3B7B8028D67C010006EB45 /* LoadingCell.swift in Sources */,
+				CEB5C84828D64EF000F1B3C2 /* File.swift in Sources */,
 				CE389E1128C934900058008F /* MovieTableViewCell.swift in Sources */,
-				CE568FCD28D4E34200F96DAC /* RealmManager.swift in Sources */,
+				CE568FCD28D4E34200F96DAC /* RealmFunctions.swift in Sources */,
 				CE515BA128C6949000CFF54B /* SceneDelegate.swift in Sources */,
 				CE520C5228D4BB7000C0DED0 /* RealmModels.swift in Sources */,
 			);
