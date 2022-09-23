@@ -86,21 +86,20 @@ class NetworkManager {
 }
 
 
-func getNewMovies(status: inout String, page: Int, completion: @escaping([Movie], String) -> Void) {
+func getNewMovies(page: Int, completion: @escaping([Movie]) -> Void) {
     
-    status = "loading"
     let url = "https://api.themoviedb.org/3/trending/all/day?api_key=b718f4e2921daaf000e347114cf44187&page=\(page)"
     
     let request = AF.request(url, method: .get)
     
-    let status2 = "standby"
+   
     
     request.responseDecodable(of: Trends.self) { response in
         
 
         do {
             let data = try response.result.get().results
-            completion(data, status2)
+            completion(data)
             
             
         } catch {

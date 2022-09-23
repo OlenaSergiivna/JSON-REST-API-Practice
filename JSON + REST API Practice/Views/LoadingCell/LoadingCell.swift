@@ -15,7 +15,7 @@ class LoadingCell: UITableViewCell {
         super.awakeFromNib()
         
         backgroundColor = UIColor.clear
-        activityIndicator.color = UIColor.white
+        activityIndicator.color = UIColor.gray
     }
 
     

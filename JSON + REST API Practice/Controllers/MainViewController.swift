@@ -16,7 +16,11 @@ class MainViewController: UIViewController {
     
     var pageCount = 1
        
-    var displayStatus = "standby"
+    var displayStatus = false {
+        didSet {
+            print("ds: \(displayStatus)")
+        }
+    }
     
     var totalPagesCount = 3
     
@@ -84,17 +88,21 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate  {
+  
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
+            print("main cell | display status: \(displayStatus)")
+            
             return trendyMovies.count
-        } else if section == 1 {
+        } else if section == 1  && displayStatus == true{
+            
+            print("loading cell")
             return 1
         } else {
             return 0
         }
     }
-    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -134,32 +142,27 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, UIScro
     }
     
     
-    
-//        func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    
-        //print(trendyMovies.count)
-        //print("IndexPath: \(indexPath.row) - Items in array: \(trendyMovies.count) - 10 = \(trendyMovies.count - 10)")
-        
-//        if indexPath.row == trendyMovies.count - 10, !isLoading {
-//            loadMoreData()
-//        }
-    // }
-    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if ((indexPath.row == self.trendyMovies.count - 1) && displayStatus == "standby" && totalPagesCount > pageCount) {
-            loadMoreData()
+        if ((indexPath.row == self.trendyMovies.count - 1) && displayStatus == false && totalPagesCount > pageCount) {
+            
+            displayStatus = true
+           
+            DispatchQueue.main.async {
+                self.trendyMoviesTableView.reloadSections(IndexSet(integer: 1), with: .none)
+            }
             
             pageCount += 1
             
-            getNewMovies(status: &displayStatus, page: pageCount) { [weak self] data, status in
+            getNewMovies(page: pageCount) { [weak self] data in
                 
-                self?.displayStatus = status
                 print("data - \(data.count)")
                 
                 
                 saveInRealm(movies: data)
                 let result = getFromRealm()
                 print("realm - \(result.count)")
+                
+                self?.displayStatus = false
                 
                 for movie in result {
                     if let trendyMovies = self?.trendyMovies {
@@ -173,20 +176,18 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, UIScro
                 }
                 print("array - \(String(describing: self?.trendyMovies.count))")
                 
-                DispatchQueue.main.async {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    
                     self?.trendyMoviesTableView.reloadData()
                 }
             }
+            
+            
+            
 
         }
             
         
-    }
-    
-
-    func loadMoreData() {
-        print("Loading more data...")
-
     }
 }
 
