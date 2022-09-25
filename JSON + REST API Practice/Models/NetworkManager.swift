@@ -12,9 +12,9 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func requestTrendyMovies(page: Int, completion: @escaping([Movie]) -> Void) {
+    func requestTrendyMovies(completion: @escaping([Movie]) -> Void) {
         
-        let url = "https://api.themoviedb.org/3/trending/all/day?api_key=b718f4e2921daaf000e347114cf44187&page=\(page)"
+        let url = "https://api.themoviedb.org/3/trending/all/day?api_key=b718f4e2921daaf000e347114cf44187&page=1"
         
         let request = AF.request(url, method: .get)
         
@@ -98,7 +98,9 @@ func getNewMovies(page: Int, completion: @escaping([Movie]) -> Void) {
         
 
         do {
+            print("started decoding")
             let data = try response.result.get().results
+            print("decoded")
             completion(data)
             
             

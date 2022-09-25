@@ -14,11 +14,15 @@ class MainViewController: UIViewController {
     var deviceAray = Company()
     var trendyMovies: [MovieRealm] = []
     
-    var pageCount = 1
+    var pageCount = 1 {
+        didSet {
+            print("page count: \(pageCount)")
+        }
+    }
        
     var displayStatus = false {
         didSet {
-            print("ds: \(displayStatus)")
+            print("display status: \(displayStatus)")
         }
     }
     
@@ -28,7 +32,13 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        deleteAll()
+        
+        let result2 = getFromRealm()
+        print(result2.count)
+        
+        print(trendyMovies.count)
        
         let nibMovieCell = UINib(nibName: "MovieTableViewCell", bundle: nil)
         trendyMoviesTableView.register(nibMovieCell, forCellReuseIdentifier: "MovieTableViewCell")
@@ -46,8 +56,8 @@ class MainViewController: UIViewController {
         }
         
         
-        NetworkManager.shared.requestTrendyMovies(page: pageCount) { [weak self] data in
-            deleteAll()
+        NetworkManager.shared.requestTrendyMovies() { [weak self] data in
+            
             saveInRealm(movies: data)
             
             let result = getFromRealm()
@@ -88,21 +98,20 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate  {
-  
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         if section == 0 {
-            print("main cell | display status: \(displayStatus)")
-            
             return trendyMovies.count
-        } else if section == 1  && displayStatus == true{
             
-            print("loading cell")
+        } else if section == 1  && displayStatus == true{
             return 1
+            
         } else {
             return 0
         }
     }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -119,7 +128,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, UIScro
             
             cell.configure(with: trendyMovies[indexPath.row], genres: GlobalVariables.movieGenres, tvGenres: GlobalVariables.tvGenres)
             return cell
-
             
         } else {
 
@@ -143,24 +151,27 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, UIScro
     
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if ((indexPath.row == self.trendyMovies.count - 1) && displayStatus == false && totalPagesCount > pageCount) {
+        if ((indexPath.row == self.trendyMovies.count - 1) && totalPagesCount > pageCount) {
             
             displayStatus = true
-           
+            pageCount += 1
+            
             DispatchQueue.main.async {
                 self.trendyMoviesTableView.reloadSections(IndexSet(integer: 1), with: .none)
+                
             }
             
-            pageCount += 1
+           
             
             getNewMovies(page: pageCount) { [weak self] data in
                 
-                print("data - \(data.count)")
+                print("data from api - \(data.count)")
                 
                 
                 saveInRealm(movies: data)
+                
                 let result = getFromRealm()
-                print("realm - \(result.count)")
+                print("data in realm - \(result.count)")
                 
                 self?.displayStatus = false
                 
@@ -174,20 +185,15 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, UIScro
                     }
                     
                 }
-                print("array - \(String(describing: self?.trendyMovies.count))")
+                
+                print("data in array - \(String(describing: self?.trendyMovies.count))")
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                    
                     self?.trendyMoviesTableView.reloadData()
+                    
                 }
             }
-            
-            
-            
-
         }
-            
-        
     }
 }
 
